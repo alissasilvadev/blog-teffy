@@ -671,13 +671,13 @@ html {
     /* 2. Muda a seção para coluna para empilhar o texto e a foto */
     .secao-sobre {
         display: flex !important;
-        flex-direction: column !important; /* Empilha verticalmente */
+        flex-direction: column !important; 
         flex-wrap: wrap !important;
-        gap: 30px !important;              /* Espaçamento ideal entre texto e foto */
+        gap: 20px !important;              
         width: 100% !important;
     }
 
-    /* 3. ALVO PRINCIPAL: Força a caixinha do texto a se abrir totalmente */
+    /* 3. Força a caixinha do texto a se abrir totalmente */
     .texto-sobre {
         width: 100% !important;
         max-width: 100% !important;
@@ -693,12 +693,51 @@ html {
         overflow-wrap: break-word !important;
     }
 
-    /* 5. Ajusta o tamanho da foto no celular para não quebrar a tela */
-    .foto-sobre-container, 
+    /* 5. Ajusta o tamanho e dá espaço ACIMA da foto para não colar no texto */
+    .foto-sobre-container {
+        margin-top: 35px !important; 
+        margin-bottom: 20px !important;
+    }
+    
     .foto-sobre-container img {
-        max-width: 280px !important;
+        max-width: 260px !important;
         width: 100% !important;
         height: auto !important;
         margin: 0 auto !important;
+        display: block !important;
+    }
+
+    /* 6. Arrumar os blocos de Instagram e E-mail */
+    .lista-contatos {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .item-contato {
+        display: flex !important;
+        flex-direction: row !important; /* Mantém o ícone ao lado do texto */
+        align-items: center !important;
+        justify-content: flex-start !important; 
+        gap: 15px !important; 
+        width: 100% !important;
+        padding: 12px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .item-contato img {
+        width: 30px !important;
+        height: 30px !important;
+        margin: 0 !important; 
+    }
+
+    .item-contato div, 
+    .item-contato p, 
+    .item-contato span {
+        text-align: left !important; 
+        margin: 0 !important;
     }
 }
